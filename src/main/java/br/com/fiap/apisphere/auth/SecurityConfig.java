@@ -20,6 +20,7 @@ public class SecurityConfig {
                     .requestMatchers(HttpMethod.POST,"/login").permitAll()
                     .requestMatchers(HttpMethod.GET, "/users").permitAll()
                     .requestMatchers(HttpMethod.POST, "/users").permitAll()
+                    .requestMatchers(HttpMethod.GET, "/users/profile").authenticated()
                     .anyRequest().authenticated()
         );
 
